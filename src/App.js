@@ -1,21 +1,21 @@
 import React from "react";
-import { UseState } from './UseState.js';
-import { ClassState } from './ClassState.js';
-import styled from "styled-components";
-import './App.css';
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle, Wrapper } from "./components/Styled.js";
+import { UseState } from './components/UseState.js';
+import { ClassState } from './components/ClassState.js';
+import theme from "./components/theme";
 
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-`;
 
 function App() {
 
   return (
-    <Wrapper>
-      <UseState name="Use State" />
-      <ClassState name="Class State" />
-    </Wrapper>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle/>
+      <Wrapper>
+        <UseState name="Use State" />
+        <ClassState name="Class State" />
+      </Wrapper>
+    </ThemeProvider>
   );
 }
 

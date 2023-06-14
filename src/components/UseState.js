@@ -3,6 +3,7 @@ import {
   Section,
   Heading2,
   Paragraph,
+  InputContainer,
   Input,
   Button
 } from "./Styled";
@@ -15,16 +16,17 @@ function UseState({ name }) {
       <Heading2>Eliminar {name}</Heading2>
       <Paragraph>Por favor, escribe el código de seguridad para comprobar que quieres eliminar.</Paragraph>
 
-      {error && (
-        <Paragraph>Error: el código es incorrecto</Paragraph>
-      )}
-
-      <Input type="text" placeholder="Código de Seguridads" />
-      <Button
-        onClick={() => setError(prevState => !prevState)}
-      >
-        Comprobar
-      </Button>
+      <InputContainer>
+        <Input placeholder="Código de Seguridad" />
+        {error && (
+          <Paragraph $error>Error: el código es incorrecto</Paragraph>
+        )}
+        <Button
+          onClick={() => setError(prevState => !prevState)}
+        >
+          Comprobar
+        </Button>
+      </InputContainer>
     </Section>
   );
 }
