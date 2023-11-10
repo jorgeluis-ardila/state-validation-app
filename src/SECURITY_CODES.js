@@ -1,0 +1,3 @@
+const SECURITY_CODES = ['JLAG24', 'GDML18', 'MA1302', 'KGJDMA', '130221'];
+
+export default SECURITY_CODES;

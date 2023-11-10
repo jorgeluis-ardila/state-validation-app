@@ -11,14 +11,14 @@ const theme = {
     light: '#F7EBE8',
     dark: '#1E1E24',
     highlight: '#deb887',
-    error: darken('#FFA987', 20),
+    error: darken('#FFA987', 30),
   },
   button: {
     active: '#E54B4B',
     disabled: lighten('#444140', 20),
-    hover: darken('#E54B4B', 30)
+    hover: darken('#E54B4B', 30),
   },
-  fontSize: (value) => `${value / 16}rem`,
+  fontSize: value => `${value / 16}rem`,
 };
 
 export default theme;

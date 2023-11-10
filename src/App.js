@@ -1,9 +1,10 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, Wrapper } from "./components/Styled.js";
-import { UseState } from './components/UseState.js';
-import { ClassState } from './components/ClassState.js';
-import theme from "./components/theme";
+import { UseState } from './components/UseState';
+import { UseReducer } from './components/UseReducer';
+// import { ClassState } from './components/ClassState';
+import theme from "./theme/theme";
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       <GlobalStyle/>
       <Wrapper>
         <UseState name="Use State" />
-        <ClassState name="Class State" />
+        <UseReducer name="Use Reducer" />
+        {/* <ClassState name="Class State" /> */}
       </Wrapper>
     </ThemeProvider>
   );
